@@ -75,6 +75,9 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+;; Maixmize when starting
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
 (setq line-spacing 5)
 
 ;; Gravatars in commits
