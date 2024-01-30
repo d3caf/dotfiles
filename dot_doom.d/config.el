@@ -78,6 +78,9 @@
 ;; Maixmize when starting
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 
+;; Change font size increment
+(setq doom-font-increment 1)
+
 (setq line-spacing 5)
 
 ;; Gravatars in commits
