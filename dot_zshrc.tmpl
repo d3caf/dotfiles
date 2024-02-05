@@ -32,6 +32,7 @@ antigen apply
 
 ### NR Stuff
 export HOMEBREW_ARTIFACTORY_TOKEN={{ onepasswordRead "op://private/nr artifactory token/credential" }}
+export FALCON_CUSTOMER_ID={{ onepasswordRead "op://private/crowd strike customer id/credential" }}
 
 eval 
 NR1_AC_ZSH_SETUP_PATH=/Users/aanguiano/Library/Caches/newrelic-cli/autocomplete/zsh_setup && test -f $NR1_AC_ZSH_SETUP_PATH && source $NR1_AC_ZSH_SETUP_PATH; # nr1 autocomplete setup
