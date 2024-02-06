@@ -81,7 +81,12 @@
 ;; Change font size increment
 (setq doom-font-increment 1)
 
+;; Line spacing
 (setq line-spacing 5)
+
+;; Fix flycheck underlines
+(custom-set-faces!
+  '(flycheck-error :underline (:color "red2" :style wave)))
 
 ;; Gravatars in commits
 (after! magit
