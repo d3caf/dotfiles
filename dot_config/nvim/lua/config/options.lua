@@ -4,4 +4,3 @@
 local opt = vim.opt
 
 opt.relativenumber = false
-opt.winbar = "%=%m %f %y Lines:%L %p%% Buff:%n"
