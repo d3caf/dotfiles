@@ -1,3 +1,14 @@
+local float_border = {
+  { "┌", "FloatBorder" },
+  { "─", "FloatBorder" },
+  { "┐", "FloatBorder" },
+  { "│", "FloatBorder" },
+  { "┘", "FloatBorder" },
+  { "─", "FloatBorder" },
+  { "└", "FloatBorder" },
+  { "│", "FloatBorder" },
+}
+
 return {
   {
     "echasnovski/mini.indentscope",
@@ -67,7 +78,6 @@ return {
     opts = {
       diagnostics = {
         virtual_text = false,
-        float = true,
       },
     },
   },

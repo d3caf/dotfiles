@@ -4,3 +4,7 @@
 local opt = vim.opt
 
 opt.relativenumber = false
+
+vim.diagnostic.config({ float = {
+  border = "rounded",
+} })
