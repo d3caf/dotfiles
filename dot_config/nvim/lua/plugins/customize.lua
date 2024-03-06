@@ -75,6 +75,13 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    init = function()
+      local keys = require("lazyvim.plugins.lsp.keymaps").get()
+      -- Remove `rename` (setting it to <leader>cn later)
+      keys[#keys + 1] = { "<leader>cr", false }
+      -- Set `rename` to <leader>cn
+      keys[#keys + 1] = { "<leader>cn", vim.lsp.buf.rename, desc = "Rename" }
+    end,
     opts = {
       diagnostics = {
         virtual_text = false,
