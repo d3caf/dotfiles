@@ -88,19 +88,16 @@ return {
       },
     },
   },
-  -- Github PR reviews in NVIM
   {
-    "ldelossa/gh.nvim",
+    "pwntester/octo.nvim",
     dependencies = {
-      {
-        "ldelossa/litee.nvim",
-        config = function()
-          require("litee.lib").setup()
-        end,
-      },
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+      "nvim-tree/nvim-web-devicons",
     },
+    cmd = "Octo",
     config = function()
-      require("litee.gh").setup()
+      require("octo").setup()
     end,
   },
 }
