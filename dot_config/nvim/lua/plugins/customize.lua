@@ -21,6 +21,14 @@ local logo = [[
 logo = string.rep("\n", 8) .. logo .. "\n\n"
 
 return {
+  --    {
+  --      "williamboman/mason.nvim",
+  --      opts = function(_, opts)
+  --        opts.ensure_installed = vim.tbl_filter(function(name)
+  --          return not vim.tbl_contains({ "elixir-ls" }, name)
+  --        end, opts.ensure_installed)
+  --      end,
+  --    },
   {
     "nvimdev/dashboard-nvim",
     opts = {
@@ -29,15 +37,15 @@ return {
       },
     },
   },
-  {
-    "echasnovski/mini.indentscope",
-    opts = {
-      draw = {
-        delay = 0,
-        animation = require("mini.indentscope").gen_animation.none(),
-      },
-    },
-  },
+  --  {
+  --    "echasnovski/mini.indentscope",
+  --    opts = {
+  --      draw = {
+  --        delay = 0,
+  --        animation = require("mini.indentscope").gen_animation.none(),
+  --      },
+  --    },
+  --  },
   {
     "folke/tokyonight.nvim",
     opts = {
@@ -102,6 +110,12 @@ return {
       keys[#keys + 1] = { "<leader>cn", vim.lsp.buf.rename, desc = "Rename" }
     end,
     opts = {
+      inlay_hints = {
+        enabled = true,
+      },
+      codelens = {
+        enabled = true,
+      },
       diagnostics = {
         virtual_text = false,
       },
@@ -116,7 +130,9 @@ return {
     },
     cmd = "Octo",
     config = function()
-      require("octo").setup()
+      require("octo").setup({
+        default_to_projects_v2 = false,
+      })
     end,
   },
 }
