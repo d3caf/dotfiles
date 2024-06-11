@@ -21,14 +21,6 @@ local logo = [[
 logo = string.rep("\n", 8) .. logo .. "\n\n"
 
 return {
-  --    {
-  --      "williamboman/mason.nvim",
-  --      opts = function(_, opts)
-  --        opts.ensure_installed = vim.tbl_filter(function(name)
-  --          return not vim.tbl_contains({ "elixir-ls" }, name)
-  --        end, opts.ensure_installed)
-  --      end,
-  --    },
   {
     "nvimdev/dashboard-nvim",
     opts = {
@@ -37,23 +29,14 @@ return {
       },
     },
   },
-  --  {
-  --    "echasnovski/mini.indentscope",
-  --    opts = {
-  --      draw = {
-  --        delay = 0,
-  --        animation = require("mini.indentscope").gen_animation.none(),
-  --      },
-  --    },
-  --  },
   {
     "folke/tokyonight.nvim",
     opts = {
-      transparent = true,
-      styles = {
-        sidebars = "transparent",
-        floats = "transparent",
-      },
+      --      transparent = true,
+      --      styles = {
+      --        sidebars = "transparent",
+      --        floats = "transparent",
+      --      },
       dim_inactive = true,
       on_highlights = function(hl, c)
         local prompt = "#2d3149"
@@ -86,18 +69,6 @@ return {
           fg = c.bg_dark,
         }
       end,
-    },
-  },
-  {
-    "utilyre/barbecue.nvim",
-    name = "barbecue",
-    version = "*",
-    dependencies = {
-      "SmiteshP/nvim-navic",
-      "nvim-tree/nvim-web-devicons",
-    },
-    opts = {
-      theme = "tokyonight",
     },
   },
   {
